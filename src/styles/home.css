@@ -350,8 +350,9 @@
 }
 .history-list {
 	overflow-y: auto;
-	height: 372px;
+	max-height: 372px;
 	margin-bottom: 25px;
+	padding-bottom: 1px;
 }
 .list-history {
 }

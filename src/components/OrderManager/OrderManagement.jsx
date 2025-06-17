@@ -78,6 +78,7 @@ const OrderManagement = () => {
 
 	const clearHistory = useCallback(() => {
 		setHistory([])
+		saveListsData()
 	}, [])
 
 	const handleStateOrder = (id, typeList) => {
