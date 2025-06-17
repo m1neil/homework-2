@@ -1,0 +1,39 @@
+@import url("./input");
+@import url("./button");
+@import url("./select");
+
+.form {
+}
+.form-label {
+	font-weight: 500;
+	color: #ececec;
+	&:not(.form-label-mb-none) {
+		margin-bottom: 20px;
+	}
+}
+.form-row {
+	&:not(:last-child) {
+		margin-bottom: 35px;
+	}
+	&:has(+ .form-button) {
+		margin-bottom: 25px;
+	}
+}
+.form-row-flex {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 20px;
+	row-gap: 15px;
+	align-items: center;
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+.form-wrap {
+	flex-basis: 100%;
+}
+.form-input {
+	&:not(:last-child):not(.form-input-mb-none) {
+		margin-bottom: 15px;
+	}
+}

@@ -1,0 +1,84 @@
+.select {
+	background-color: #272932;
+	border-radius: 10px;
+	padding: 15px 25px;
+	font-size: 15px;
+	width: 100%;
+	transition: background-color 0.3s;
+	&::picker-icon {
+		color: #8c67f6;
+		transition: transform 0.3s;
+	}
+	&:open::picker-icon {
+		transform: rotate(180deg);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #1a1c26;
+		}
+	}
+	option {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		background-color: #1a1c26;
+		padding: 15px 15px;
+		color: #fff;
+		transition: background-color 0.3s;
+		&:not(:last-child) {
+			border-bottom: 1px solid #34363e;
+		}
+		&:first-child {
+			border-radius: 8px 8px 0 0;
+		}
+		&:last-child {
+			border-radius: 0 0 8px 8px;
+		}
+		&:checked {
+			background-color: #7940cf;
+		}
+		&::checkmark {
+			content: "✅";
+		}
+		&:disabled {
+			cursor: default;
+			color: #ffffff7e;
+			justify-content: flex-end;
+			&::checkmark {
+				display: none;
+			}
+		}
+		@media (any-hover: hover) {
+			&:not(:disabled):hover {
+				background-color: #5921cb;
+			}
+		}
+	}
+}
+
+select,
+::picker(select) {
+	appearance: base-select;
+}
+::picker(select) {
+	border: none;
+	background-color: transparent;
+	opacity: 0;
+	transform: translateY(14px);
+	transition: all 0.3s allow-discrete;
+	top: calc(anchor(bottom) + 10px);
+	left: anchor(5%);
+	scrollbar-width: thin;
+}
+
+::picker(select):popover-open {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@starting-style {
+	::picker(select):popover-open {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+}

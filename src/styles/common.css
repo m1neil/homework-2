@@ -1,0 +1,42 @@
+.title {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 1.7;
+	color: #fff;
+	a {
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #8c67f6;
+			}
+		}
+	}
+}
+.title-fz-16 {
+	font-size: 16px;
+}
+.title-fz-18 {
+	font-size: 18px;
+}
+.title-uppercase {
+	text-transform: uppercase;
+}
+
+.error {
+	color: #f64c4c;
+	font-weight: 500;
+	&.blue {
+		color: #6775f6;
+	}
+}
+
+.success {
+	color: #4cf64c;
+	font-weight: 500;
+}
+
+.spinner {
+	width: 150px;
+	object-fit: contain;
+	aspect-ratio: 1;
+}
