@@ -3,8 +3,8 @@ const OrderManagementList = ({ title, list, handleStateOrder, typeList, textBtn 
 		let contentList
 		if (!list.length) contentList = <div> The list is empty...</div>
 		else {
-			contentList = list.map(({ id, title }, index) =>
-				<li key={index} className="list-kitchen-item" key={id}>
+			contentList = list.map(({ id, title }) =>
+				<li className="list-kitchen-item" key={id}>
 					<span className="list-kitchen-text">{title}</span>
 					<button
 						className="list-kitchen-button button button-border"
